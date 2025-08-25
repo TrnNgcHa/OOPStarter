@@ -1,0 +1,65 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace OOPStarter
+{
+    internal class OutputFunction
+    {
+        public static void XuatUCLN(string[] args)
+        {
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+
+            Console.Write("Nhập số nguyên thứ nhất: ");
+            int a = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Nhập số nguyên thứ hai: ");
+            int b = Convert.ToInt32(Console.ReadLine());
+
+            int KetQua = MyFunction.UCLN(a, b);
+            Console.WriteLine($"Ước chung lớn nhất của {a} và {b} là: {KetQua}\n\n");
+        }
+
+        public static void XuatSwap(string[] args)
+        {
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+
+            Console.Write("Nhập số nguyên thứ nhất: ");
+            int x = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Nhập số nguyên thứ hai: ");
+            int y = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine($"Trước khi hoán đổi: x = {x}, y = {y}");
+            MyFunction.Swap(ref x, ref y);
+            Console.WriteLine($"Sau khi hoán đổi: x = {x}, y = {y}\n\n");
+        }
+
+        public static void XuatNghichDao(string[] args)
+        {
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+
+            Console.Write("Nhập số nguyên: ");
+            int n = Convert.ToInt32(Console.ReadLine());
+            
+            int KetQua = MyFunction.NghichDao(n);
+            Console.WriteLine($"Nghịch đảo của {n} là: {KetQua}\n\n");
+        }
+
+        public static void XuatDoiXung(string[] args)
+        {
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+
+            int n = Convert.ToInt32(Console.ReadLine());
+
+            if (MyFunction.DoiXung(n))
+                Console.WriteLine($"{n} là số đối xứng\n\n");
+            else
+                Console.WriteLine($"{n} không phải là số đối xứng\n\n");
+        }
+
+        public static 
+    }
+}
