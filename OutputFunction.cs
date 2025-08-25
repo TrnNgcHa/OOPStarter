@@ -60,6 +60,37 @@ namespace OOPStarter
                 Console.WriteLine($"{n} không phải là số đối xứng\n\n");
         }
 
-        public static 
+       public static void XuatXoaKhoangTrang(string[] args)
+       {
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+
+            string str = Console.ReadLine();
+            string KetQua = MyFunction.XoaKhoangTrang(str);
+            Console.WriteLine($"Chuỗi sau khi xóa khoảng trắng: '{KetQua}'\n\n");
+       }
+
+       public static void XuatKyTuBenTrai(string[] args)
+       {
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+            
+            string str = Convert.ToString(Console.ReadLine());
+            Console.Write("Nhập thứ tự ký tự bên trái cần lấy: ");
+            int n = Convert.ToInt32(Console.ReadLine());
+
+            char KetQua = MyFunction.KyTuBenTrai(str, n);
+            Console.WriteLine($"Ký tự bên trái thứ {n}: '{KetQua}'\n\n");
+       }
+        
+       public static void XuatKyTuBenPhai(string[] args)
+       {
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+
+            string str = Convert.ToString(Console.ReadLine());
+            Console.Write("Nhập thứ tự ký tự bên phải cần lấy: ");
+            int n = Convert.ToInt32(Console.ReadLine());
+
+            char KetQua = MyFunction.KyTuBenPhai(str, n);
+            Console.WriteLine($"Ký tự bên phải thứ {n}: '{KetQua}'\n\n");
+        }
     }
 }

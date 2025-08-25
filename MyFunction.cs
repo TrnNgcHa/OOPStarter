@@ -52,5 +52,27 @@ namespace OOPStarter
             else
                 return false;
         }
+
+        public static string XoaKhoangTrang(string str)
+        {
+            string result = "";
+            for (int i = 0; i < str.Length; i++)
+            {
+                if (str[i] != ' ')
+                    result += str[i];
+            }
+            return result;
+        }
+
+        public static char KyTuBenTrai(string str, int n)
+        {
+            return str[n];
+
+        }
+
+        public static char KyTuBenPhai(string str, int n)
+        {
+            return str[str.Length - n];
+        }
     }
 }
